@@ -1,4 +1,3 @@
-<?php require('etc/validardb.php') ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,7 +13,7 @@
         <a href="equipos.php"><button class="boton">Equipos</button></a>
         <a href="fixture.php"><button class="boton">Fixture</button></a>
         <a href="puntajes.php"><button class="boton">Puntajes</button></a>
-        <form method="post"><button class="boton" type="submit" name="reiniciardb">Reiniciar DB (3 seg.)</button></form>
+        <a href="reiniciar.php"><button class="boton">Reiniciar DB</button></a>
     </main>
 </body>
 </html>
