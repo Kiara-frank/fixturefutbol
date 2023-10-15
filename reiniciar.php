@@ -1,16 +1,12 @@
 <?php
 require('etc/conexion.php');
 
-$tablas = ["goles_logs", "partidos_logs"];
+$sql = "TRUNCATE TABLE `goles_logs`";
+if ($conexion->query($sql) === TRUE) echo "Tabla vaciada correctamente.<br>";
+else echo "Error al vaciar la tabla: " . $conexion->error;
 
-foreach ($tablas as $tabla) {
-    $sql = "TRUNCATE TABLE $tabla";
-    if ($conexion->query($sql) === TRUE) {
-        echo "Tabla $tabla vaciada correctamente.<br>";
-    } else {
-        echo "Error al vaciar la tabla $tabla: " . $conexion->error;
-        exit;
-    }
-}
+$sql = "UPDATE `partidos_logs` SET goles1 = 0, goles2 = 0, jugado = 0";
+if ($conexion->query($sql) === TRUE) echo "Valores actualizados correctamente.";
+else echo "Error al actualizar los valores: " . $conexion->error;
 
-header("Location: index.php");
+echo "<div><a href='index.php'>Volver</a></div>";
