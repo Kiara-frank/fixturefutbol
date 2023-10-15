@@ -1,0 +1,264 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+    cursor: auto;
+    padding: 0;
+    margin: 0;
+}
+
+html::-webkit-scrollbar {
+    background: #333333;
+	width: 8px;
+}
+
+html::-webkit-scrollbar-thumb {
+    background: deepskyblue;
+    border-radius: 50px;
+}
+
+body {
+    background-color: #222222;
+    background-image: url('../img/wallpaper.png');
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+main {
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+    min-height: 100vh;
+    max-width: 100vw;
+    display: flex;
+}
+
+#equipos {
+    justify-content: space-evenly;
+    margin: 10vh auto;
+    flex-flow: row;
+    flex-wrap: wrap;
+    width: 90vw;
+}
+
+#equipos > div {
+    text-align: center;
+    width: 100%;
+}
+
+#fixture {
+    padding: 10vh 0vw;
+}
+
+#resultado h3 {
+    font-weight: 400;
+    color: #222222;
+    margin: 8px 0px;
+}
+
+.separarEquipos {
+    border: none;
+    border-top: 1px solid #22222233;
+    margin: 1vh 0vw;
+}
+
+.jugarForm {
+    justify-content: space-evenly;
+    display: flex;
+    width: 100vw;
+}
+
+.jugarEquipo {
+    background: #f5f5f5;
+    border-radius: 25px;
+    align-items: center;
+    flex-flow: column;
+    padding: 3vh 2vw;
+    display: flex;
+    width: 350px;
+}
+
+.jugarEquipo > h2 {
+    text-transform: uppercase;
+    text-align: center;
+    margin: 1vh 0vw;
+    width: 100%;
+}
+
+.jugarEquipo > div {
+    margin: 4px 0px;
+}
+
+.jugarEquipo input {
+    box-shadow: 0 0 5px #222222AA;
+    background: white;
+    border-radius: 6px;
+    padding: 2px 0px;
+    padding-left: 6px;
+    color: #222222;
+    margin: 0px 5px;
+    outline: none;
+    border: none;
+    width: 40px;
+}
+
+.jugarEquipo1 {
+    align-items: end;
+}
+
+.jugarEquipo2 {
+    align-items: start;
+}
+
+.jugarEquipo2 > div {
+    display: flex;
+    flex-flow: row-reverse;
+}
+
+.carta {
+    box-shadow: 6px 6px 3px #222222AA;
+    background: #f5f5f5;
+    border-radius: 25px;
+    text-align: center;
+    color: #222222;
+    padding: 4vh 4vw;
+    margin: 4vh 0vw;
+    width: 35vw;
+}
+
+.carta__header h2 {
+    text-transform: uppercase;
+    font-weight: 900;
+}
+
+.carta__main {
+    border-top: 1px solid #22222233;
+    border-bottom: 1px solid #22222233;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 1.8vh 0vw;
+    margin: 1.8vh 0vw;
+    display: flex;
+}
+
+.carta__main--fixture {
+    flex-flow: column;
+}
+
+.carta__main--partido {
+    align-items: center;
+    margin: 1vh 0vw;
+    display: flex;
+}
+
+.carta__footer {
+    text-align: justify;
+    font-style: italic;
+}
+
+.puntajes {
+    box-shadow: 6px 6px 3px #222222AA;
+    border-collapse: collapse;
+    background: #f5f5f5;
+    border-radius: 25px;
+    text-align: center;
+    color: #222222;
+    margin: 2vh 0vw;
+}
+
+.puntajes th,
+.puntajes td {
+    border-bottom: 1px solid #22222233;
+    padding: 8px;
+}
+
+.puntajes th:first-of-type,
+.puntajes td:first-of-type {
+    font-weight: 600;
+    padding-right: 3vw;
+    padding-left: 3vw;
+}
+
+.puntajes th:last-of-type,
+.puntajes td:last-of-type {
+    padding-right: 3vw;
+}
+
+.puntajes th {
+    padding-top: 2vh;
+    text-transform: uppercase;
+}
+
+.link {
+    text-decoration: none;
+    color: #222222;
+    cursor: pointer;
+}
+
+.boton {
+    box-shadow: 6px 6px 3px #222222AA;
+    transition: all 150ms;
+    background: #f5f5f5;
+    border-radius: 16px;
+    color: #222222;
+    font-weight: 600;
+    padding: 2vh 0vw;
+    margin: 1vh 0vw;
+    cursor: pointer;
+    font-size: 1em;
+    border: none;
+    width: 20vw;
+}
+
+.boton:hover {
+    transform: scale(1.1);
+}
+
+.boton--alt {
+    box-shadow: 0 0 5px #222222AA;
+    background: deepskyblue;
+    padding: 10px 20px;
+    width: fit-content;
+    color: #f5f5f5;
+    font-weight: 600;
+    margin: 0px 10px;
+}
+
+.boton--disabled {
+    background: #999999;
+    color: #444444;
+    font-weight: 100;
+    cursor: auto;
+}
+
+.boton--disabled:hover {
+    cursor: not-allowed;
+    transform: unset;
+}
+
+.boton--jugar {
+    transform: translate(-50%, -50%);
+    justify-content: space-evenly;
+    align-items: center;
+    position: absolute;
+    flex-flow: column;
+    display: flex;
+    left: 50%;
+    top: 50%;
+}
+
+.boton--jugar > .boton {
+    margin-bottom: 2vh;
+}
+
+.titulo {
+    text-shadow: 6px 6px #222222;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 900;
+    color: #f5f5f5;
+    margin: 3vh 0vw;
+    font-size: 3em;
+    width: 100%;
+}
